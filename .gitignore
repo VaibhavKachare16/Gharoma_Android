@@ -2,6 +2,14 @@
 #
 .DS_Store
 
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# VSCode
+.vscode/
+
 # Xcode
 #
 build/
@@ -13,20 +21,26 @@ build/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-xcuserdata
+xcuserdata/
 *.xccheckout
 *.moved-aside
-DerivedData
+DerivedData/
 *.hmap
 *.ipa
 *.xcuserstate
 **/.xcode.env.local
+ios/build/
+ios/Pods/
+ios/DerivedData/
+ios/.DS_Store
+ios/xcuserdata/
+ios/link-assets-manifest.json
 
 # Android/IntelliJ
 #
 build/
-.idea
-.gradle
+.idea/
+.gradle/
 local.properties
 *.iml
 *.hprof
@@ -34,12 +48,42 @@ local.properties
 *.keystore
 !debug.keystore
 .kotlin/
+android/app/build/
+android/build/
+android/.gradle/
+android/.idea/
+android/.settings/
+android/.cxx/
+android/local.properties
+android/.DS_Store
+android/app/src/main/assets/
+android/app/src/main/res/raw/
+android/app/src/debug/
+android/app/src/release/
+android/app/src/profile/
+android/app/src/androidTest/
+android/app/src/test/
+android/app/src/main/jniLibs/
+android/app/src/main/libs/
+android/app/src/main/obj/
+android/app/src/main/.DS_Store
+android/gradle/
+android/gradlew
+android/gradlew.bat
+android/gradle.properties
+android/gradle-wrapper.jar
+android/gradle-wrapper.properties
+android/settings.gradle
+android/link-assets-manifest.json
 
 # node.js
 #
 node_modules/
-npm-debug.log
-yarn-error.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
 
 # fastlane
 #
@@ -59,17 +103,44 @@ yarn-error.log
 # Ruby / CocoaPods
 **/Pods/
 /vendor/bundle/
+Gemfile.lock
 
-# Temporary files created by Metro to check the health of the file watcher
+# Metro/Expo/Cache
+.expo/
+.expo-shared/
+dist/
+tmp/
+temp/
+.cache/
+babel-cache/
+metro-cache/
+haul-cache/
 .metro-health-check*
 
-# testing
-/coverage
+# Test output
+coverage/
+*.lcov
 
-# Yarn
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
+# Patch files
+patches/
+*.patch
+
+# Misc
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*.zip
+
+# Ignore asset zips and backups
+Food Assets.zip
+
+# Ignore build artifacts
+build/
+
+# Ignore asset manifest files
+link-assets-manifest.json
+
+# Ignore backup files
+*~
